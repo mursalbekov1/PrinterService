@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class PrinterController {
 
-    PrinterService printerService;
+    private final PrinterService printerService;
 
     @GetMapping("/print")
     public String print(@RequestParam(value = "text", defaultValue = "Hello") String text) {
